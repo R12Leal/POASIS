@@ -1,0 +1,28 @@
+<section data-ng-controller="MedicamentosController">
+    <div class="page-header">
+        <a type="button" class="btn btn-success" href="/#!/medicamentos/create">
+            <i class="glyphicon glyphicon-open"></i> Añadir medicamento
+      </a>
+    </div>
+    <div>
+        <table ng-table="tableParams" show-filter="true">
+            <tr ng-repeat="medicamento in $data">
+                <td data-title="'Medicamento:'" sortable="'nombre_medicamento'" filter="{ 'nombre_medicamento': 'text' }">{{medicamento.nombre_medicamento}}</td>
+                <td>
+                <td data-title="'Laboratorio:'" sortable="'nombre_laboratorio'" filter="{ 'nombre_laboratorio': 'text' }">{{medicamento.nombre_laboratorio}}</td>
+                <td>
+                    <div class="table-actions">
+                <td>
+                   <div class="table-actions">
+                        <a class="btn btn-warning" title="Editar" href="/#!/medicamentos/{{medicamento._id}}/edit">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                        <a class="btn btn-danger" title="Eliminar" ng-really-message="¿Seguro que quiere eliminar este medicamento de la lista?" ng-really-click="remove(medicamento)" item="medicamento">
+                  				<span class="glyphicon glyphicon-remove-circle"></span>
+                  			</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

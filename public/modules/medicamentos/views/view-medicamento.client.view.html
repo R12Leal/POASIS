@@ -1,0 +1,28 @@
+<section data-ng-controller="MedicamentosController" data-ng-init="toViewMedicamento()">
+	<div class="page-header">
+		<h1 data-ng-bind="medicamento.name"></h1>
+	</div>
+
+	<div class="col-md-12">
+
+		<form novalidate>
+			<formly-form model="medicamento" fields="formFields">
+			</formly-form>
+		</form>
+
+		<hr/>
+		<div data-ng-show="((authentication.user) && (authentication.user._id == medicamento.user._id))">
+			<a class="btn btn-success" href="/#!/medicamentos/{{medicamento._id}}/edit">
+				<i class="glyphicon glyphicon-edit"></i> Editar
+			</a>
+			<a class="btn btn-danger" title="Eliminar" ng-really-message="¿Seguro que quiere eliminar este medicamento?" ng-really-click="remove()" item="medicamento">
+				<i class="glyphicon glyphicon-remove-circle"></i> Eliminar
+			</a>
+			<a class="btn btn-primary" href="/#!/medicamentos">
+				<i class="glyphicon glyphicon-list"></i> Lista de medicamentos
+			</a>
+		</div>
+
+	</div>
+
+</section>

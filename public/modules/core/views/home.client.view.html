@@ -1,0 +1,45 @@
+<section data-ng-controller="HomeController">
+	<div class="jumbotron">
+		<div class="container">
+			<h1>POASIS</h1>
+			<blockquote>
+				<p>Gestión de pautas médicas para personas residentes en un geriátrico.</p>
+			  	<small><cite title="Source Title">Proyecto WebApp</cite></small>
+			</blockquote>
+			<div data-ng-hide="authentication.user">
+				<p><a href="/#!/signin" class="btn btn-success btn-lg">Iniciar sesión</a></p>
+			</div>
+			<div data-ng-show="authentication.user">
+				<p><a href="/auth/signout" class="btn btn-info btn-lg">Cerrar tu sesión {{authentication.user.displayName}}</a></p>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-md-3">
+			<h3>Medicamentos <span class="glyphicon glyphicon-ok"></span></h3>
+			<p>Control de los medicamentos que se utilizan en la residencia.</p>
+		</div>
+		<div class="col-md-3">
+			<h3>Residentes <span class="glyphicon glyphicon-ok"></span></h3>
+			<p>Almacenamiento de datos personales de los residentes.</p>
+		</div>
+		<div class="col-md-3">
+			<h3>Pautas <span class="glyphicon glyphicon-warning-sign"></span></h3>
+			<p class="text-danger">Control de las pautas médicas de los residentes (En construcción).</p>
+		</div>
+		<div class="col-md-3">
+			<h3>Demo <span class="glyphicon glyphicon-eye-open"></span></h3>
+			<p class="text-success">
+				<ul>
+					<li>Usuario: demo</li>
+					<li>Password: demo1234</li>
+					<li>Puedes crear una cuenta.</li>
+				</ul>
+			</p>
+		</div>
+	</div>
+	<hr />
+			<table><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=R12Leal&repo=POASIS&type=watch&size=large" height="30" width="100" frameborder="0" scrolling="0" style="width:100px; height: 30px;" allowTransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=R12Leal&repo=POASIS&type=fork&size=large" height="30" width="100" frameborder="0" scrolling="0" style="width:100px; height: 30px;" allowTransparency="true"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=R12Leal&type=follow&size=large" height="30" width="240" frameborder="0" scrolling="0" style="width:240px; height: 30px;" allowTransparency="true"></iframe></td></tr></table>
+	<hr />
+</section>

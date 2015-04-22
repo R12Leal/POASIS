@@ -1,0 +1,52 @@
+<section class="row" data-ng-controller="AuthenticationController">
+	<div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6 login-form-bg">
+		<form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
+			<fieldset>
+			<legend>¡Registrar nuevo usuario!</legend>
+				<div class="form-group">
+					<div class="input-group input-group-lg">
+	  					<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-exclamation-sign"></span></span>
+						<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="¡Nombre!" aria-describedby="sizing-addon1" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group input-group-lg">
+	  					<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-exclamation-sign"></span></span>
+						<input type="text" id="lastName" name="lastName" class="form-control" data-ng-model="credentials.lastName" placeholder="¡Apellidos!" aria-describedby="sizing-addon1" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group input-group-lg">
+	  					<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-envelope"></span></span>
+						<input type="email" id="email" name="email" class="form-control" data-ng-model="credentials.email" placeholder="¡Email!" aria-describedby="sizing-addon1" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group input-group-lg">
+	  					<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user"></span></span>
+						<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="¡Nombre de usuario!" aria-describedby="sizing-addon1" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group input-group-lg">
+	  					<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-pencil"></span></span>
+						<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="¡Contraseña!" aria-describedby="sizing-addon1" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="text-center form-group">
+						<button type="submit" class="btn btn-lg btn-success">Registrar usuario <span class="glyphicon glyphicon-ok"></span></button>
+						<a href="/#!/signin" class="btn btn-lg btn-primary">Acceder <span class="glyphicon glyphicon-log-in"></span></a>
+					</div>
+				<hr />
+				<div data-ng-show="error" class="text-center text-danger">
+					<div class="alert alert-dismissible alert-danger">
+						<h4>¡Oops!</h4>
+						<strong data-ng-bind="error"></strong>
+					</div>
+				</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</section>

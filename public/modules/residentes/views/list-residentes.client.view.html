@@ -1,0 +1,33 @@
+<section data-ng-controller="ResidentesController">
+    <div class="page-header">
+         <a type="button" class="btn btn-success" href="/#!/residentes/create">
+            <i class="glyphicon glyphicon-open"></i> Añadir residente
+        </a>
+    </div>
+    <div>
+        <table ng-table="tableParams" show-filter="true">
+            <tr ng-repeat="residente in $data">
+                <td data-title="'Estado actual'" sortable="'estado'">
+                    <span class="label label-success" ng-if="residente.estado == 'Activo'">{{residente.estado}}</span>
+                    <span class="label label-danger" ng-if="residente.estado == 'Inactivo'">{{residente.estado}}</span>
+                </td>
+                <td data-title="'Primer apellido'" sortable="'apellido1_residente'" filter="{ 'apellido1_residente': 'text' }">{{residente.apellido1_residente}}</td>
+                <td data-title="'Segundo apellido'" sortable="'apellido2_residente'" filter="{ 'apellido2_residente': 'text' }">{{residente.apellido2_residente}}</td>
+                <td data-title="'Nombre'" sortable="'nombre_residente'" filter="{ 'nombre_residente': 'text' }">{{residente.nombre_residente}}</td>
+                <td>
+                   <div class="table-actions">
+                        <a class="btn btn-info" title="Ver" href="/#!/residentes/{{residente._id}}">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                        </a>
+                        <a class="btn btn-warning" title="Editar" href="/#!/residentes/{{residente._id}}/edit">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                        <a class="btn btn-danger" title="Eliminar" ng-really-message="¿Seguro que quiere eliminar a este residente de la lista?" ng-really-click="remove(residente)" item="residente">
+                  				<span class="glyphicon glyphicon-remove-circle"></span>
+                  			</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

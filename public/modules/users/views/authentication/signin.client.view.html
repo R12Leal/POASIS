@@ -1,0 +1,35 @@
+<section class="row" data-ng-controller="AuthenticationController">
+	<div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6 login-form-bg">
+		<form data-ng-submit="signin()" class="signin form-horizontal" autocomplete="off">
+			<fieldset>
+			<legend>¡Iniciar sesión!</legend>
+				<div class="form-group">
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user"></span></span>
+						<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="¡Usuario!" aria-describedby="sizing-addon1" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-pencil"></span></span>
+						<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="¡Contraseña!" aria-describedby="sizing-addon1" />
+					</div>	
+				</div>
+				<div class="text-center form-group">
+						<button type="submit" class="btn btn-lg btn-success">Acceder <span class="glyphicon glyphicon-log-in"></span></button>
+				</div>
+				<div class="forgot-password">
+					<p><a href="/#!/password/forgot" class="btn btn-primary btn-xs">¿Contraseña perdida? <span class="glyphicon glyphicon-info-sign"></span></a></p>
+					<p><a href="/#!/signup" class="btn btn-primary btn-xs">¿Nuevo usuario? <span class="glyphicon glyphicon-info-sign"></span></a></p>
+				</div>
+				<hr />
+				<div data-ng-show="error" class="text-center text-danger">
+					<div class="alert alert-dismissible alert-danger">
+						<h4>¡Oops!</h4>
+						<strong data-ng-bind="error"></strong>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</section>
