@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://R12Leal:MLAB1415ll.@ds041337.mongolab.com:41337/db_poasis',
+	db: 'mongodb://localhost/poasis-test',
 	app: {
 		title: 'POASIS - ¡Pautas médicas para residencias!'
 	},
