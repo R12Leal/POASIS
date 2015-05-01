@@ -4,5 +4,5 @@ Under construction!
 
 ## License
 
-License
+License MIT
 
