@@ -1,9 +1,8 @@
 ## POASIS 
 
-¡Under construction!
+Under construction!
 
-## Licencia
+## License
 
-Licencia MIT
+License
 
-* Para +INFO consulte el archivo incluido sobre la licencia.
